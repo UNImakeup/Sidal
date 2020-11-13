@@ -1,0 +1,31 @@
+<style>  
+  ul.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: DarkCyan;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li.navpunkt {
+  
+  float: left;
+}
+li a.navlink {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a.navlink:hover {
+  background-color: aqua;
+}
+
+.active {
+  background-color: #FF6400;
+}
+</style>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+     body          { margin-top  : 100px;     }
+     .centered     { text-align  : center;
+                     font-size   : 70px;      }
+    </style>
+    <script>
+     function ajax(a) {
+       var xmlhttp = new XMLHttpRequest();
+       xmlhttp.onreadystatechange = function () {
+         if (this.readyState == 4 && this.status == 200) {
+           document.getElementById('tal').innerHTML = this.responseText;
+         }
+       }
+       xmlhttp.open("GET", 'stars.php?count=' + a +'&svar=11', true);
+       xmlhttp.send();
+     }
+    </script>
+  </head>
+  <body>
+
+    <p id="tal"></p>
+    <div class="centered" onclick="ajax(+1)" >&#8679;</div>
+        <div class="centered" onclick="ajax(-1)" >&#8681;</div>
+
+
+
+  </body>
+</html>
